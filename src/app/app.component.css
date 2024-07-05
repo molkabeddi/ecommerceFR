@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2; /* Couleur de fond du mat-toolbar */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem; /* Taille de police du texte de la marque */
+    font-weight: bold; /* Gras */
+  }
+  
+  .spacer {
+    flex: 1; /* Espaceur flexible pour pousser les boutons vers la droite */
+  }
+  
+  .nav-buttons a {
+    color: white; /* Couleur du texte des boutons */
+    text-decoration: none; /* Supprimer les soulignements de lien */
+    margin-left: 10px; /* Marge entre les boutons */
+  }
+  
+  .nav-buttons a.active {
+    font-weight: bold; /* Gras pour l'élément actif */
+  }
+  
