@@ -1,8 +1,7 @@
-// src/app/signup/signup.component.ts
-
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { User } from '../models/user.model';  // Ensure this doesn't import AuthService
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-signup',
@@ -10,28 +9,9 @@ import { User } from '../models/user.model';  // Ensure this doesn't import Auth
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  constructor(private router: Router) { }
 
-  user: User = {
-    name: '',
-    email: '',
-    password: '',
-    address: '',
-    phoneNumber: ''
-  };
-
-  constructor(private authService: AuthService) { }
-
-  signUp(): void {
-    this.authService.signUp(this.user)
-      .subscribe(
-        response => {
-          console.log('User registered successfully!', response);
-          // Réinitialiser le formulaire ou naviguer vers une autre page
-        },
-        error => {
-          console.error('Failed to register user!', error);
-          // Gérer les erreurs, afficher un message à l'utilisateur, etc.
-        }
-      );
+  navigateTo(route: string) {
+    this.router.navigate([route]);
   }
 }

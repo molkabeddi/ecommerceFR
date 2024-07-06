@@ -6,8 +6,11 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
+navigateTo(arg0: string) {
+throw new Error('Method not implemented.');
+}
   title = 'ecommercefr';
 }

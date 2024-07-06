@@ -1,28 +1,50 @@
+/* app.component.css */
+
+/* Styles pour la barre de navigation */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1976d2; /* Couleur de fond du mat-toolbar */
-    color: white; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement intérieur */
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem; /* Taille de police du texte de la marque */
-    font-weight: bold; /* Gras */
-  }
-  
-  .spacer {
-    flex: 1; /* Espaceur flexible pour pousser les boutons vers la droite */
-  }
-  
-  .nav-buttons a {
-    color: white; /* Couleur du texte des boutons */
-    text-decoration: none; /* Supprimer les soulignements de lien */
-    margin-left: 10px; /* Marge entre les boutons */
-  }
-  
-  .nav-buttons a.active {
-    font-weight: bold; /* Gras pour l'élément actif */
-  }
-  
+  background-color: #0863c4; /* Couleur de fond bleue pour la barre de navigation */
+  padding: 1rem; /* Espacement intérieur pour la barre de navigation */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère pour la barre de navigation */
+}
+
+.navbar-brand {
+  font-size: 1.8rem; /* Taille de police légèrement augmentée pour le texte du logo */
+  color: #fff; /* Couleur du texte pour le logo */
+  text-decoration: none; /* Supprimer la décoration de texte par défaut */
+}
+
+.navbar-toggler {
+  border: none; /* Supprimer la bordure du bouton de bascule */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Couleur de fond pour l'icône du bouton de bascule */
+}
+
+.navbar-nav {
+  display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+  align-items: center; /* Centrer verticalement les éléments dans la barre de navigation */
+}
+
+.navbar-nav.ml-auto {
+  margin-left: auto; /* Déplace tous les éléments restants à droite */
+}
+
+.navbar-nav.mr-auto {
+  margin-right: auto; /* Déplace tous les éléments restants à gauche */
+}
+
+.nav-item {
+  margin-left: 1rem; /* Espacement entre les éléments de la barre de navigation */
+}
+
+.nav-link {
+  color: #fff; /* Couleur du texte pour les liens de navigation */
+  padding: 0.5rem 1rem; /* Espacement à l'intérieur des liens */
+  text-decoration: none; /* Supprimer la décoration de texte par défaut */
+  transition: color 0.2s; /* Transition douce pour le changement de couleur */
+}
+
+.nav-link:hover {
+  color: #f8f9fa; /* Couleur du texte au survol */
+}

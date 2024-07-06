@@ -3,29 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router'; 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './auth.service'; // Import AuthService
+import { routes } from './app.routes'; // Import routes
+
+
+ // Import MatToolbarModule
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule,
-    HttpClientModule  // Ensure it's included here
+    RouterModule.forRoot(routes) ,
+    // Use forRoot here
   ],
-  providers: [AuthService],  // Add AuthService to providers array
-  bootstrap: []
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
